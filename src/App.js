@@ -14,7 +14,7 @@ class App extends Component {
   }
 
   toggleMenu = () => {
-    this.setState({menuOpen: !menuOpen})
+    this.setState({menuOpen: !this.state.menuOpen})
   }
 
   render() {
