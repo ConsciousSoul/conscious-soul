@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Homepage component renders has the correct styles 1`] = `ShallowWrapper {}`;
+
+exports[`Homepage component renders has the correct styles 2`] = `ShallowWrapper {}`;
+
+exports[`Homepage component renders has the correct styles 3`] = `ShallowWrapper {}`;
+
+exports[`Homepage component renders has the correct styles 4`] = `ShallowWrapper {}`;

@@ -4,6 +4,8 @@ export const Wrapper =  styled.div `
   text-align: center;
 `;
 
+Wrapper.displayName = 'Wrapper';
+
 export const Header = styled.header`
   background-color: #282c34;
   min-height: 100vh;
@@ -15,12 +17,18 @@ export const Header = styled.header`
   color: white;
 `;
 
+Header.displayName = 'Header';
+
 export const Title = styled.h1 `
   color: #91ecda
 `;
 
+Title.displayName = 'Title';
+
 export const MenuButton = styled.h2`
   cursor: pointer
 `
+
+MenuButton.displayName = 'MenuButton';
 
 

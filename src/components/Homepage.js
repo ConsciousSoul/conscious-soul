@@ -9,17 +9,15 @@ class Homepage extends Component {
     };
   }
 
-  openMenu = () => {
-    this.setState({menuOpen: !this.state.menuOpen});
-  }
-
   render() {
     return (
       <Wrapper>
         <Header>
           <Title>Conscious Soul</Title>
-          <p>Food that awakens</p>
-          <MenuButton onClick={this.openMenu}>MENU</MenuButton>
+          <p id="subtitle">Food that awakens</p>
+          <MenuButton 
+          onClick={() => this.setState({menuOpen: true})}
+          >MENU</MenuButton>
           {this.state.menuOpen && <p>Menu will go here</p>}
         </Header>
       </Wrapper>
