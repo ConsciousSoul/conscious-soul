@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu component renders should have the correct styles 1`] = `ShallowWrapper {}`;
+
+exports[`Menu component renders should have the correct styles 2`] = `ShallowWrapper {}`;

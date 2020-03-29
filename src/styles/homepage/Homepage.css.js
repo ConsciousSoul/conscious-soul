@@ -1,9 +1,6 @@
-import styled, { keyframes, css } from 'styled-components';
+import styled from 'styled-components';
+import {fadeIn} from '../keyframes.css.js'
 
-const fade = keyframes`
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
-`
 export const Wrapper = styled.div`
   text-align: center;
 `;
@@ -30,19 +27,17 @@ export const Title = styled.h1`
 Title.displayName = 'Title';
 
 export const TitleWrapper = styled.div`
-  animation: ${fade} 2s ease
+  animation: ${fadeIn} 3s ease
 `
+
+TitleWrapper.displayName = 'TitleWrapper';
 
 export const Button = styled.h2`
   cursor: pointer
 `
 
-Button.displayName = 'MenuButton';
+Button.displayName = 'Button';
 
-export const Menu = styled.div`
-  animation: ${fade} 2s ease
-`
 
-Menu.displayName = 'Menu';
 
 
