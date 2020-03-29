@@ -1,6 +1,10 @@
-import styled from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 
-export const Wrapper =  styled.div `
+const fade = keyframes`
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+`
+export const Wrapper = styled.div`
   text-align: center;
 `;
 
@@ -19,16 +23,26 @@ export const Header = styled.header`
 
 Header.displayName = 'Header';
 
-export const Title = styled.h1 `
+export const Title = styled.h1`
   color: #91ecda
 `;
 
 Title.displayName = 'Title';
 
-export const MenuButton = styled.h2`
+export const TitleWrapper = styled.div`
+  animation: ${fade} 2s ease
+`
+
+export const Button = styled.h2`
   cursor: pointer
 `
 
-MenuButton.displayName = 'MenuButton';
+Button.displayName = 'MenuButton';
+
+export const Menu = styled.div`
+  animation: ${fade} 2s ease
+`
+
+Menu.displayName = 'Menu';
 
 
