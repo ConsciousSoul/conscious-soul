@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Wrapper, Header, Title, Button, Menu, TitleWrapper } from '../styles/homepage/Homepage.css.js';
+import { Wrapper, Header, Title, Button, TitleWrapper } from '../styles/homepage/Homepage.css.js';
+import Menu from './Menu.js';
 
 class Homepage extends Component {
   constructor(props) {
@@ -10,16 +11,13 @@ class Homepage extends Component {
   }
 
   renderContent = () => {
-    return this.state.menuOpen ? this.renderMenu() : this.renderTitle();
+    return this.state.menuOpen 
+      ? <Menu closeMenu={this.closeMenu} /> 
+      : this.renderTitle();
   }
 
-  renderMenu = () => {
-    return (
-      <Menu>
-        <Button onClick={() => this.setState({ menuOpen: false })}>Return to Main Page</Button>
-        <p>Menu will go here</p>
-      </Menu>
-    );
+  closeMenu = () => {
+    this.setState({menuOpen: false});
   }
 
   renderTitle = () => {
