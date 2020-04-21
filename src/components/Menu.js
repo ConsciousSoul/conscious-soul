@@ -13,9 +13,8 @@ export const Menu = (props) => {
 
   const renderMenuItems = () => {
     return menuItems.map((item, i) => {
-      <li key={`${item.name}-${i}`}>
-        item.name
-        item.price
+     return <li key={`${item.name}-${i}`}>
+        {item.name} - ${item.price}
       </li>
     })
   }
@@ -23,7 +22,7 @@ export const Menu = (props) => {
   return (
     <MenuWrapper>
         <Button onClick={props.closeMenu}>Return to Main Page</Button>
-        <ul>{renderMenuItems()}</ul>
+        <div>{renderMenuItems()}</div>
       </MenuWrapper>
   )
 }
