@@ -6,7 +6,9 @@ export const Menu = (props) => {
   const [menuItems, setMenuItems] = useState([])
 
   useEffect(() => {
-    fetchData().then(res => setMenuItems(res.data)
+    fetchData('/api/v1/menu_items')
+      .then(res => setMenuItems(res.data))
+      .catch(error => console.log(error))
   })
 
   return (
