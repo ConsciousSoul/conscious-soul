@@ -11,10 +11,19 @@ export const Menu = (props) => {
       .catch(error => console.log(error))
   })
 
+  const renderMenuItems = () => {
+    return menuItems.map((item, i) => {
+      <li key={`${item.name}-${i}`}>
+        item.name
+        item.price
+      </li>
+    })
+  }
+
   return (
     <MenuWrapper>
         <Button onClick={props.closeMenu}>Return to Main Page</Button>
-        <p>{JSON.stringify(menuItems)}</p>
+        <ul>{renderMenuItems()}</ul>
       </MenuWrapper>
   )
 }
